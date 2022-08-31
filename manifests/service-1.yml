@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "bdoexdevcluster03-115f"
+    labels:
+        app: "bdoexdevcluster03-115f"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 3317
+      targetPort: 3317
+      protocol: TCP
+      name: http
+    selector:
+        app: "bdoexdevcluster03-115f"
